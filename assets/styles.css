@@ -53,8 +53,8 @@ p{color:var(--muted)}
 
 /* nav */
 .nav{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.88);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
-.nav-in{display:flex;align-items:center;justify-content:space-between;height:70px}
-.brand img{height:28px;width:auto}
+.nav-in{display:flex;align-items:center;justify-content:space-between;height:78px}
+.brand img{height:40px;width:auto}
 .nav-links{display:flex;align-items:center;gap:30px}
 .nav-links a{font-size:14.5px;font-weight:500;color:#33425C}
 .nav-links a:hover{color:var(--blue)}
@@ -97,6 +97,32 @@ p{color:var(--muted)}
 .logos .label{text-align:center;font-size:12px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--soft);margin-bottom:20px}
 .logos-row{display:flex;align-items:center;justify-content:center;gap:48px;flex-wrap:wrap}
 .logos-row .lg{font-family:var(--disp);font-size:19px;font-weight:700;color:#AEB9CC;letter-spacing:-.01em}
+
+/* problem cards (gradient + mockup + metric badge) */
+.pgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:50px;text-align:left}
+.pcard{position:relative;border-radius:20px;overflow:hidden;min-height:430px;padding:30px;color:#fff;display:flex;flex-direction:column}
+.pcard h3{color:#fff;font-size:24px;margin-bottom:10px}
+.pcard p{color:rgba(255,255,255,.86);font-size:15px;line-height:1.5;max-width:280px}
+.pcard-a{background:linear-gradient(160deg,#8893A2,#B9C2CE)}
+.pcard-b{background:#3a3320}
+.pcard-b img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0}
+.pcard-b .pc-in{position:relative;z-index:2}
+.pcard-b:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(20,16,8,.72) 0%,rgba(20,16,8,.15) 45%,rgba(20,16,8,.1) 100%);z-index:1}
+.pcard-c{background:linear-gradient(155deg,#5E1B1B,#2E1010)}
+/* google business card mockup */
+.gcard{margin-top:auto;background:#fff;border-radius:14px;padding:20px 22px;box-shadow:0 18px 40px rgba(10,26,47,.28);color:var(--ink)}
+.gcard .biz{font-family:var(--disp);font-weight:700;font-size:22px;color:#202327}
+.gcard .meta{font-size:14px;margin:4px 0 2px}.gcard .meta b{color:#D33}.gcard .meta span{color:#5f6b7a}
+.gcard .yrs{font-size:14px;color:#5f6b7a;margin-bottom:14px}
+.gcard .acts{display:flex;gap:26px}
+.gcard .act{display:flex;flex-direction:column;align-items:center;gap:5px;font-size:11px;font-weight:600;color:#2563EB;letter-spacing:.03em}
+.gcard .act .cir{width:30px;height:30px;border-radius:50%;background:#EAF1FE;display:flex;align-items:center;justify-content:center}
+/* declining metric badge */
+.declta{margin-top:auto;align-self:flex-start;background:#FAD4D4;color:#C0392B;font-family:var(--disp);font-weight:800;font-size:30px;padding:14px 22px;border-radius:14px;display:flex;align-items:center;gap:10px;box-shadow:0 14px 34px rgba(46,16,16,.4)}
+.declta .tri{width:0;height:0;border-left:11px solid transparent;border-right:11px solid transparent;border-top:16px solid #C0392B}
+.pshape{position:absolute;background:#E8615A;border-radius:14px;z-index:0;opacity:.9}
+.pshape.s1{width:120px;height:96px;right:-20px;bottom:60px;border-radius:18px}
+.pshape.s2{width:90px;height:150px;right:40px;bottom:-30px}
 
 /* alternating feature rows */
 .frow{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center;margin-top:64px}
@@ -192,7 +218,7 @@ p{color:var(--muted)}
 .footer{background:var(--navy);color:#9AABC6;padding:56px 0 30px;font-size:14.5px}
 .foot-top{display:flex;justify-content:space-between;gap:40px;flex-wrap:wrap;padding-bottom:30px;border-bottom:1px solid rgba(255,255,255,.1)}
 .footer .brand-f{font-family:var(--disp);font-size:20px;font-weight:700;color:#fff;display:flex;align-items:center;gap:10px}
-.footer .brand-f img{height:24px;filter:brightness(0) invert(1)}
+.footer .brand-f img{height:34px;filter:brightness(0) invert(1)}
 .foot-links{display:flex;gap:28px;flex-wrap:wrap}
 .foot-links a:hover{color:#fff}
 .foot-bottom{padding-top:22px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;font-size:13px;color:#6E80A0}
@@ -205,7 +231,8 @@ p{color:var(--muted)}
   .frow{grid-template-columns:1fr;gap:30px;margin-top:44px}
   .frow.flip .ftext{order:2}.frow.flip .fmedia{order:1}
   .frow .ftext{order:2}.frow .fmedia{order:1}
-  .steps,.cs-grid,.price-grid{grid-template-columns:1fr}
+  .steps,.cs-grid,.price-grid,.pgrid{grid-template-columns:1fr}
+  .pcard{min-height:380px}
   .metricband{padding:42px 26px}
   .ftext p,.hero .sub,.lead{max-width:none}
 }
