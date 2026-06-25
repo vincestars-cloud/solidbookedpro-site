@@ -272,7 +272,8 @@ p{color:var(--muted)}
 .hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:52px;align-items:center}
 .ht{text-align:left}
 .ht h1{margin-bottom:18px;font-size:clamp(32px,4.2vw,46px)}
-.h1line{white-space:nowrap}
+.h1line,.subline{white-space:nowrap}
+.bu{font-weight:700;text-decoration:underline;color:var(--ink)}
 .ht .sub{font-size:18px;color:var(--muted);max-width:520px}
 .ht .hero-cta{justify-content:flex-start;margin-top:24px}
 .hl-box{background:var(--blue);color:#fff;border-radius:10px;padding:.02em .2em;-webkit-box-decoration-break:clone;box-decoration-break:clone}
@@ -399,5 +400,5 @@ p{color:var(--muted)}
   .formwrap,.fmedia.pad{padding:22px}
   .video-tag{font-size:11px}
   .fixgrid,.featsmall-grid,.gallery,.foot-grid{grid-template-columns:1fr}
-  .h1line{white-space:normal}
+  .h1line,.subline{white-space:normal}
 }
